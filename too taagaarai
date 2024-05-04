@@ -1,0 +1,28 @@
+start:
+TextWindow.Clear()
+round2 = 10
+round = 0 
+number2 = Math.GetRandomNumber(100)
+TextWindow.Title = "toog taanu"
+TextWindow.ForegroundColor = "gray"
+TextWindow.WriteLine(" ")
+TextWindow.WriteLine("My number is less than 100")
+TextWindow.WriteLine("You have " + round2 + " rounds")
+begin:
+For round2 = 1 To 10
+TextWindow.Write("what is your number? ") 
+number = TextWindow.ReadNumber()
+i = 1-100
+If number2 = number  Then
+    TextWindow.WriteLine("correct")
+EndIf
+If number2 > number Then
+    TextWindow.WriteLine("too small")
+EndIf
+If number2 < number Then
+    TextWindow.WriteLine("too large")
+EndIf
+If number = number2 Then
+      Program.End()
+EndIf
+EndFor
